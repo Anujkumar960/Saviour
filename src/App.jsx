@@ -1,4 +1,5 @@
 import './App.css'
+import { IdoEvent } from './Components/IdoEvent'
 import { Tokenomics } from './Components/Tokenomics'
 import { CardPage } from './Components/cardpage'
 import { FaqComponent } from './Components/faq'
@@ -14,6 +15,7 @@ function App() {
 
     <HomePage/>
     <IntroductionPage/>
+    <IdoEvent/>
     <Tokenomics/>
     <CardPage/>
     <FaqComponent/>
