@@ -72,10 +72,10 @@ import {
             left: 0,
             width: "100%",
             height: "100%",
-            bg: "rgba(0, 0, 0, 0.5)", // Adjusted to a lighter black background with 50% opacity
+            bg: "rgba(0, 0, 0, 0.5)", 
           }}
       >
-        <Box bgColor={"rgba(0, 0, 0, 0.5)"} width={"100%"} height={"100%"}> // Adjusted to a lighter black background with 50% opacity
+        <Box bgColor={"rgba(0, 0, 0, 0.5)"} width={"100%"} height={"100%"}> 
           <Box maxW={"1512px"} mx={"auto"} pt={12}>
             <Text
               fontFamily={"Shojumaru"}
