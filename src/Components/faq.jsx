@@ -42,13 +42,6 @@ export const FaqComponent = () => {
             }}
             src={"https://s3-alpha-sig.figma.com/img/7624/956b/bb5893d955ab92e34ab86102a42d6d23?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=b1~NO03ErsYsNkWmXnSA4~DC7Miz~9BKRyLhfzbi4ncI2EtBpBikP6Ab9oWmJVCnbuvL5M5KQsrgtlkmEBero7xZoJOf-Dsq9HdEoOFfY0rtiFaC11Gc8600aJ2ZvcdEpmBl8cgjjqe6TVxO0IoTRFQx~yiKw~39A0RKm0N8Wba4ea5hDFCHkW7BV16Y~VhWxYbmVNwdN9RDfRhcVhTLovmGIoF6f5EQsHvNQzYFMkeStp4P2jypS7Sp1oHkTSrbEsH-NPnAiEJmfZf-Otbo3k0SXA~O5loOObJ6PqmF9VjlpIIdyk1ABF42YExaEu5QDj~1qeCtmXC0XClPMX2WQg__"} objectFit={"contain"} w={"503px"} mt={"45px"} />
           <Box width={"640px"}
-        //    data-aos="zoom-in-left"  css={{
-        //     transition: "transform 0.3s ease",
-        //     ":hover": {
-        //         transform: "scale(1.05)",
-        //         cursor:"pointer"
-        //     }
-        // }}
         >
             <Flex
               flexDirection={"column"}
