@@ -1,0 +1,178 @@
+import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+
+import TokenomicsImg from "../assets/TokenomicsImg.png";
+import Tokenomicslogo from "../assets/Tokenomicslogo.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
+
+const Tokenomics = () => {
+  const data = [
+    {
+      name: "Name",
+      value: "Saviour",
+    },
+    {
+      name: "Symbol",
+      value: "SVR",
+    },
+    {
+      name: "Total Supply",
+      value: "1000 Trillion",
+    },
+
+    {
+      name: "Decimals",
+      value: "18",
+    },
+  ];
+
+  useEffect(() => {
+    Aos.init({ duration: 4000, delay: 300 });
+  }, []);
+
+  return (
+    <Box w="100%" height={{ base: "798px", md: "706px" }} position={"relative"}>
+      <Box
+        position="absolute"
+        top="0"
+        left="0"
+        w="100%"
+        bgImage={TokenomicsImg}
+        zIndex="0"
+        m={"0 auto"}
+        height={{ base: "798px", md: "706px" }}
+        backgroundPosition={{ base: "50% 35%", md: "0 35%" }}
+        backgroundSize={"cover"}
+        boxSizing="border-box"
+      >
+        <Box
+          position="absolute"
+          top="0"
+          left="0"
+          w="100%"
+          height={{ base: "798px", md: "706px" }}
+          bg="rgba(0, 0, 0, 0.9)" 
+          zIndex="1"
+        />
+        <Box position="relative" zIndex="2" pt={20}>
+          <Text
+            fontFamily={"Shojumaru"}
+            fontSize={{ base: "32px", md: "44px" }}
+            fontWeight={"400"}
+            lineHeight={{ base: "38.08px", md: "52.36px" }}
+            textAlign={"center"}
+            color={"#ED0137"}
+          >
+            Tokenomics
+          </Text>
+
+          <Flex
+            m={10}
+            pt={{ base: 5, md: 10 }}
+            justify={"center"}
+            align={"center"}
+            gap={{ base: 20, md: 10 }}
+            direction={{ base: "column", md: "row" }}
+            data-aos="zoom-in-left"  
+                  css={{
+                    transition: "transform 0.3s ease",
+                    ":hover": {
+                        transform: "scale(1.05)",
+                        cursor:"pointer"
+                    }
+                }}
+          >
+            <Flex
+              width={{ base: "100%", md: "40%" }}
+              direction={"column"}
+              align={"center"}
+            >
+              <Box
+                width={{ base: " 206.73px", md: "244px" }}
+                height={{ base: "59.31px", md: "70px" }}
+                fontFamily={"Shojumaru"}
+                fontSize={"18px"}
+                fontWeight={400}
+                lineHeight={"23.84px"}
+                color={"white"}
+                bg={"#ED0137"}
+                borderRadius={{ base: "16px", md: "20px" }}
+                display={"flex"}
+                justifyContent={"center"}
+                alignItems={"center"}
+                zIndex={1}
+              >
+                Token Details
+              </Box>
+
+              <Box
+                mt={{ base: "-30px", md: "-35px" }}
+                width={{ base: "349px", md: "412px" }}
+                height={{ base: "249px", md: "306px" }}
+                borderRadius={"20px"}
+                border={"1.5px solid red"}
+              >
+                <Grid
+                  h="200px"
+                  templateRows="repeat(4 1fr)"
+                  gap={{ base: 1, md: 2 }}
+                  color={"white"}
+                  mt={{ base: 10, md: 16 }}
+                  fontFamily={"ZCOOL KuaiLe"}
+                  
+                >
+                  {data.map((item) => {
+                    return (
+                      <GridItem
+                        key={item.name}
+                        px={14}
+                        fontSize={{ base: "16px", md: "20px" }}
+                        fontWeight={"400"}
+                        lineHeight={"20px"}
+                        textAlign={"left"}
+                      >
+                        <Flex justify={"space-between"} textAlign={"left"}>
+                          <Text textAlign={"left"}>{item.name}</Text>
+                          <Text textAlign={"left"} color={"#DF180A"}>
+                            {item.value}
+                          </Text>
+                        </Flex>
+                      </GridItem>
+                    );
+                  })}
+                </Grid>
+              </Box>
+            </Flex>
+            <Box
+              width={{ base: "105%", md: "60%" }}
+              boxSizing="border-box"
+              overflow={"hidden"}
+              data-aos="fade-up"
+              css={{
+                transition: "transform 0.3s ease",
+                ":hover": {
+                    transform: "scale(1.05)",
+                    cursor:"pointer"
+                }
+            }}
+            >
+              <Image 
+               css={{
+            transition: "transform 0.3s ease",
+            ":hover": {
+                transform: "scale(1.05)",
+                cursor:"pointer"
+            }
+        }}
+         src={Tokenomicslogo} w={"100%"} objectFit="cover" />
+            </Box>
+          </Flex>
+        </Box>
+      </Box>
+    </Box>
+  );
+};
+
+export { Tokenomics };
